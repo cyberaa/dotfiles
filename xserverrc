@@ -1,0 +1,6 @@
+#!/bin/sh
+# Start Display Server
+exec /usr/bin/Xorg -nolisten tcp "$@"
+# Start XORG virtualization on same terminal where login ocurred to 
+#   prevent bypassing by switching terminals.
+vt$XDG_VTNR
